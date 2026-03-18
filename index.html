@@ -238,8 +238,7 @@ h1.name{font-weight:700}
 <section class="hero">
   <div class="hero-left">
     <div class="hero-photo" id="heroPhoto">
-      <input type="file" accept="image/*" onchange="upFile(event,'heroPhoto','img.up')">
-      <div class="photo-hint">📷<br>add photo</div>
+      <img src="images/profile.jpg" class="up" alt="Juhi Khare">
     </div>
     <h1 class="name">Juhi Khare</h1>
     <div class="hero-sub">Ex-Business Analyst Intern @ Banner Health | MSIM @ UIUC '26 | Product, Operations &amp; Analytics | Healthcare &amp; Health Tech</div>
@@ -299,9 +298,8 @@ h1.name{font-weight:700}
         <div class="tl-left reveal-left d1">
           <div class="tl-card">
             <div class="tl-card-header">
-              <div class="org-logo" id="logo-bh">
-                <input type="file" accept="image/*" onchange="upLogo(event,'logo-bh')">
-                <div class="org-logo-ph">Logo<br>+</div>
+              <div class="org-logo">
+                <img src="images/logo-banner.png" alt="Banner Health">
               </div>
               <div class="tl-title-block">
                 <div class="tl-type">Internship</div>
@@ -333,9 +331,8 @@ h1.name{font-weight:700}
         <div class="tl-right reveal-right d1">
           <div class="tl-card">
             <div class="tl-card-header">
-              <div class="org-logo" id="logo-uiuc">
-                <input type="file" accept="image/*" onchange="upLogo(event,'logo-uiuc')">
-                <div class="org-logo-ph">Logo<br>+</div>
+              <div class="org-logo">
+                <img src="images/logo-uiuc.png" alt="UIUC">
               </div>
               <div class="tl-title-block">
                 <div class="tl-type">Role</div>
@@ -357,9 +354,8 @@ h1.name{font-weight:700}
         <div class="tl-left reveal-left d1">
           <div class="tl-card">
             <div class="tl-card-header">
-              <div class="org-logo" id="logo-hh">
-                <input type="file" accept="image/*" onchange="upLogo(event,'logo-hh')">
-                <div class="org-logo-ph">Logo<br>+</div>
+              <div class="org-logo">
+                <img src="images/logo-happyhunters.png" alt="Happy Hunters">
               </div>
               <div class="tl-title-block">
                 <div class="tl-type">Internship</div>
@@ -391,9 +387,8 @@ h1.name{font-weight:700}
         <div class="tl-right reveal-right d1">
           <div class="tl-card">
             <div class="tl-card-header">
-              <div class="org-logo" id="logo-djs">
-                <input type="file" accept="image/*" onchange="upLogo(event,'logo-djs')">
-                <div class="org-logo-ph">Logo<br>+</div>
+              <div class="org-logo">
+                <img src="images/logo-djs.png" alt="DJS Antariksh">
               </div>
               <div class="tl-title-block">
                 <div class="tl-type">Leadership</div>
@@ -415,9 +410,8 @@ h1.name{font-weight:700}
         <div class="tl-left reveal-left d1">
           <div class="tl-card">
             <div class="tl-card-header">
-              <div class="org-logo" id="logo-ai">
-                <input type="file" accept="image/*" onchange="upLogo(event,'logo-ai')">
-                <div class="org-logo-ph">Logo<br>+</div>
+              <div class="org-logo">
+                <img src="images/logo-aarti.png" alt="Aarti Industries">
               </div>
               <div class="tl-title-block">
                 <div class="tl-type">Internship</div>
@@ -455,9 +449,8 @@ h1.name{font-weight:700}
       <div class="edu-body">
         <div class="edu-badge">GPA 4.0 / 4.0</div>
         <div class="edu-header">
-          <div class="org-logo" id="logo-uiuc-edu">
-            <input type="file" accept="image/*" onchange="upLogo(event,'logo-uiuc-edu')">
-            <div class="org-logo-ph">Logo<br>+</div>
+          <div class="org-logo">
+            <img src="images/logo-uiuc.png" alt="UIUC">
           </div>
           <div>
             <div class="edu-degree">MS in Information Management</div>
@@ -473,9 +466,8 @@ h1.name{font-weight:700}
       <div class="edu-body">
         <div class="edu-badge">GPA 3.62 / 4.0</div>
         <div class="edu-header">
-          <div class="org-logo" id="logo-djsanghvi">
-            <input type="file" accept="image/*" onchange="upLogo(event,'logo-djsanghvi')">
-            <div class="org-logo-ph">Logo<br>+</div>
+          <div class="org-logo">
+            <img src="images/logo-djs.png" alt="DJS Sanghvi">
           </div>
           <div>
             <div class="edu-degree">B.Tech Chemical Engineering <span style="font-weight:400;font-style:italic">· Minors in Data Science</span></div>
@@ -500,11 +492,14 @@ h1.name{font-weight:700}
 
     <div class="proj-card reveal d2">
       <div class="proj-carousel">
-        <div class="proj-slides" id="ps2">
-          <div class="proj-slide"><div class="proj-slide-ph">🤖</div></div>
+        <div class="proj-slides">
+          <div class="proj-slide"><img src="images/ps2-1.jpg" alt="Project image"></div>
+          <div class="proj-slide"><img src="images/ps2-2.jpg" alt="Project image"></div>
         </div>
         <div class="proj-cnav">
           <div class="pcn" onclick="pSlide('ps2',-1)">‹</div>
+          <div class="pcn" onclick="pSlide('ps2',1)">›</div>
+        </div>
           <div class="pcn" onclick="pSlide('ps2',1)">›</div>
           <label class="pcn-add"><input type="file" accept="image/*" multiple onchange="pAdd('ps2',event)">+ images</label>
         </div>
@@ -524,11 +519,14 @@ h1.name{font-weight:700}
 
     <div class="proj-card reveal d3">
       <div class="proj-carousel">
-        <div class="proj-slides" id="ps4">
-          <div class="proj-slide"><div class="proj-slide-ph">🚀</div></div>
+        <div class="proj-slides">
+          <div class="proj-slide"><img src="images/ps4-1.jpg" alt="Project image"></div>
+          <div class="proj-slide"><img src="images/ps4-2.jpg" alt="Project image"></div>
         </div>
         <div class="proj-cnav">
           <div class="pcn" onclick="pSlide('ps4',-1)">‹</div>
+          <div class="pcn" onclick="pSlide('ps4',1)">›</div>
+        </div>
           <div class="pcn" onclick="pSlide('ps4',1)">›</div>
           <label class="pcn-add"><input type="file" accept="image/*" multiple onchange="pAdd('ps4',event)">+ images</label>
         </div>
@@ -629,12 +627,30 @@ h1.name{font-weight:700}
   </div>
   <div class="gal-wrap">
     <div class="gal-track" id="gtrack">
-      <div class="gal-slide"><div class="gal-inner" id="gi0"><input type="file" accept="image/*" onchange="upGal(event,'gi0')"><div class="gal-ph"><span>📷</span>BANNER HEALTH, Phoenix</div><div class="gcap">BANNER HEALTH · Phoenix AZ</div></div></div>
-      <div class="gal-slide"><div class="gal-inner" id="gi1"><input type="file" accept="image/*" onchange="upGal(event,'gi1')"><div class="gal-ph"><span>📷</span>BANNER HEALTH Internship</div><div class="gcap">BANNER HEALTH · Phoenix AZ</div></div></div>
-      <div class="gal-slide"><div class="gal-inner" id="gi2"><input type="file" accept="image/*" onchange="upGal(event,'gi2')"><div class="gal-ph"><span>📷</span>UIUC Campus</div><div class="gcap">UIUC · Champaign IL</div></div></div>
-      <div class="gal-slide"><div class="gal-inner" id="gi3"><input type="file" accept="image/*" onchange="upGal(event,'gi3')"><div class="gal-ph"><span>📷</span>Mars Rover Competition</div><div class="gcap">European Rover Challenge 2022 🏆</div></div></div>
-      <div class="gal-slide"><div class="gal-inner" id="gi4"><input type="file" accept="image/*" onchange="upGal(event,'gi4')"><div class="gal-ph"><span>📷</span>DJS ANTARIKSH Team</div><div class="gcap">DJS ANTARIKSH · Mumbai</div></div></div>
-      <div class="gal-slide"><div class="gal-inner" id="gi5"><input type="file" accept="image/*" onchange="upGal(event,'gi5')"><div class="gal-ph"><span>📷</span>Add a memory</div><div class="gcap">Your moment</div></div></div>
+      <div class="gal-slide"><div class="gal-inner">
+        <img src="images/gallery1.jpg" alt="BANNER HEALTH · Phoenix AZ">
+        <div class="gcap">BANNER HEALTH · Phoenix AZ</div>
+      </div></div>
+      <div class="gal-slide"><div class="gal-inner">
+        <img src="images/gallery2.jpg" alt="BANNER HEALTH · Phoenix AZ">
+        <div class="gcap">BANNER HEALTH · Phoenix AZ</div>
+      </div></div>
+      <div class="gal-slide"><div class="gal-inner">
+        <img src="images/gallery3.jpg" alt="UIUC · Champaign IL">
+        <div class="gcap">UIUC · Champaign IL</div>
+      </div></div>
+      <div class="gal-slide"><div class="gal-inner">
+        <img src="images/gallery4.jpg" alt="European Rover Challenge 2022 🏆">
+        <div class="gcap">European Rover Challenge 2022 🏆</div>
+      </div></div>
+      <div class="gal-slide"><div class="gal-inner">
+        <img src="images/gallery5.jpg" alt="DJS ANTARIKSH · Mumbai">
+        <div class="gcap">DJS ANTARIKSH · Mumbai</div>
+      </div></div>
+      <div class="gal-slide"><div class="gal-inner">
+        <img src="images/gallery6.jpg" alt="Your moment">
+        <div class="gcap">Your moment</div>
+      </div></div>
     </div>
   </div>
   <div class="gal-controls">
@@ -670,26 +686,58 @@ h1.name{font-weight:700}
   <div class="ms"><div class="ms-num">Case Study 01 · Health IT</div><div class="ms-title">ERP Data Migration — BANNER HEALTH</div><div class="ms-body">Making BANNER HEALTH's data ready for a critical ERP transition across 50,000+ records.</div></div>
   <div class="ms"><div class="ms-num">The Approach</div><div class="ms-title">Define → Validate → Clean → Recommend</div><div class="ms-body"><strong>1.</strong> Defined data quality metrics for ERP migration.<br><br><strong>2.</strong> Built validation scripts across 50K+ records.<br><br><strong>3.</strong> Designed ETL cleaning workflows.<br><br><strong>4.</strong> Delivered insights across clinical, supply chain, and compliance teams.</div></div>
   <div class="ms"><div class="ms-num">Impact</div><div class="ms-title">Measurable outcomes</div><div class="ms-metrics"><div><span class="mmv">23%</span><span class="mml">Data quality improvement</span></div><div><span class="mmv">50K+</span><span class="mml">Records validated</span></div></div>
-  <div class="ms-upload" id="mu1"><input type="file" accept="image/*" multiple onchange="mUp('mp1',event)"><div class="ms-upload-lbl">📎 Upload slide deck screenshots</div><div class="ms-thumbs" id="mp1"></div></div></div>
+  <div class="ms-decks">
+    <div style="font-size:.8rem;color:var(--blue);margin-bottom:0.8rem;letter-spacing:0.05em;text-transform:uppercase;">Project Slides / Deck</div>
+    <div class="ms-thumbs">
+      <!-- Add your slide screenshots below manually: -->
+      <img src="images/deck1-slide1.jpg" class="ms-thumb" alt="Slide 1">
+      <img src="images/deck1-slide2.jpg" class="ms-thumb" alt="Slide 2">
+      <img src="images/deck1-slide3.jpg" class="ms-thumb" alt="Slide 3">
+    </div>
+  </div></div></div>
 </div></div>
 
 <div class="modal" id="m2"><div class="mbox"><button class="mx" onclick="closeM('m2')">✕</button>
   <div class="ms"><div class="ms-num">Case Study 02 · Product Strategy</div><div class="ms-title">AI FLAVOR PERSONALIZATION — PRINGLES</div><div class="ms-body">Addressing declining flavor differentiation with a full AI product strategy and data architecture.</div></div>
   <div class="ms"><div class="ms-num">The Solution</div><div class="ms-title">A phased AI product &amp; data strategy</div><div class="ms-body"><strong>Phase 1:</strong> AI model capturing real-time taste signals from Gen Z &amp; Millennial consumers.<br><br><strong>Phase 2:</strong> Predictive analytics linking feedback to small-batch flavor testing.<br><br><strong>Phase 3:</strong> SKU decision engine reducing go-to-market risk.</div></div>
   <div class="ms"><div class="ms-num">Outcome</div><div class="ms-title">Faster innovation. Lower risk.</div><div class="ms-body">A framework connecting consumer insight to product iteration at the speed of culture.</div>
-  <div class="ms-upload" id="mu2"><input type="file" accept="image/*" multiple onchange="mUp('mp2',event)"><div class="ms-upload-lbl">📎 Upload slide deck screenshots</div><div class="ms-thumbs" id="mp2"></div></div></div>
+  <div class="ms-decks">
+    <div style="font-size:.8rem;color:var(--blue);margin-bottom:0.8rem;letter-spacing:0.05em;text-transform:uppercase;">Project Slides / Deck</div>
+    <div class="ms-thumbs">
+      <!-- Add your slide screenshots below manually: -->
+      <img src="images/deck1-slide1.jpg" class="ms-thumb" alt="Slide 1">
+      <img src="images/deck1-slide2.jpg" class="ms-thumb" alt="Slide 2">
+      <img src="images/deck1-slide3.jpg" class="ms-thumb" alt="Slide 3">
+    </div>
+  </div></div></div>
 </div></div>
 
 <div class="modal" id="m3"><div class="mbox"><button class="mx" onclick="closeM('m3')">✕</button>
   <div class="ms"><div class="ms-num">Case Study 03 · Operations &amp; BI</div><div class="ms-title">Safety Office BI Automation — UIUC</div><div class="ms-body">Turning manual, fragmented reporting into an automated intelligence system across 15+ engineering labs.</div></div>
   <div class="ms"><div class="ms-num">Impact</div><div class="ms-title">40% more visibility. 100% compliance.</div><div class="ms-metrics"><div><span class="mmv">40%</span><span class="mml">Data visibility increase</span></div><div><span class="mmv">15+</span><span class="mml">Labs coordinated</span></div><div><span class="mmv">100%</span><span class="mml">Regulatory compliance</span></div></div>
-  <div class="ms-upload" id="mu3"><input type="file" accept="image/*" multiple onchange="mUp('mp3',event)"><div class="ms-upload-lbl">📎 Upload Power BI screenshots</div><div class="ms-thumbs" id="mp3"></div></div></div>
+  <div class="ms-decks">
+    <div style="font-size:.8rem;color:var(--blue);margin-bottom:0.8rem;letter-spacing:0.05em;text-transform:uppercase;">Project Slides / Deck</div>
+    <div class="ms-thumbs">
+      <!-- Add your slide screenshots below manually: -->
+      <img src="images/deck1-slide1.jpg" class="ms-thumb" alt="Slide 1">
+      <img src="images/deck1-slide2.jpg" class="ms-thumb" alt="Slide 2">
+      <img src="images/deck1-slide3.jpg" class="ms-thumb" alt="Slide 3">
+    </div>
+  </div></div></div>
 </div></div>
 
 <div class="modal" id="m4"><div class="mbox"><button class="mx" onclick="closeM('m4')">✕</button>
   <div class="ms"><div class="ms-num">Case Study 04 · Leadership</div><div class="ms-title">MARS ROVER SCIENCE LAB — ERC</div><div class="ms-body">Led a 33-person team to build a real in-situ science lab for a Mars Rover — competing globally.</div></div>
   <div class="ms"><div class="ms-num">Results</div><div class="ms-title">Back-to-back global podium finishes.</div><div class="ms-metrics"><div><span class="mmv">🏆 1st</span><span class="mml">Global · ERC 2022</span></div><div><span class="mmv">🥈 2nd</span><span class="mml">Global · ERC 2023</span></div><div><span class="mmv">33</span><span class="mml">Team members led</span></div></div>
-  <div class="ms-upload" id="mu4"><input type="file" accept="image/*" multiple onchange="mUp('mp4',event)"><div class="ms-upload-lbl">📎 Upload rover / competition photos</div><div class="ms-thumbs" id="mp4"></div></div></div>
+  <div class="ms-decks">
+    <div style="font-size:.8rem;color:var(--blue);margin-bottom:0.8rem;letter-spacing:0.05em;text-transform:uppercase;">Project Slides / Deck</div>
+    <div class="ms-thumbs">
+      <!-- Add your slide screenshots below manually: -->
+      <img src="images/deck1-slide1.jpg" class="ms-thumb" alt="Slide 1">
+      <img src="images/deck1-slide2.jpg" class="ms-thumb" alt="Slide 2">
+      <img src="images/deck1-slide3.jpg" class="ms-thumb" alt="Slide 3">
+    </div>
+  </div></div></div>
 </div></div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
