@@ -218,9 +218,11 @@ h1.name{font-weight:700}
   .gal-controls{padding:.8rem 1.5rem}
   .edu-row{padding:2rem 0}
 }
+#nn-canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}
 </style>
 </head>
 <body>
+<canvas id="nn-canvas"></canvas>
 <nav>
   <a href="#" class="nav-logo">JK<span>.</span></a>
   <ul class="nav-links">
@@ -283,7 +285,7 @@ h1.name{font-weight:700}
 <div id="experience">
   <div class="sec" style="padding-bottom:1rem">
     <div class="sec-eye reveal">Experience</div>
-    <div class="sec-h reveal d1">Professional<br><em>History</em></div>
+    <div class="sec-h reveal d1">Professional <em>History</em></div>
   </div>
 
   <div class="tl-outer" id="tlOuter">
@@ -442,7 +444,7 @@ h1.name{font-weight:700}
 <!-- EDUCATION -->
 <section class="sec" id="education">
   <div class="sec-eye reveal">Education</div>
-  <div class="sec-h reveal d1">Academic<br><em>History</em></div>
+  <div class="sec-h reveal d1">Academic <em>History</em></div>
   <div class="edu-list">
 
     <div class="edu-row reveal d2">
@@ -891,6 +893,48 @@ function mUp(previewId,e){
     r.readAsDataURL(f);
   });
 }
+
+// ═══════════════════════════════════════
+// NEURAL NETWORK BACKGROUND
+// ═══════════════════════════════════════
+(function(){
+  const cvs=document.getElementById('nn-canvas');
+  if(!cvs)return;
+  const ctx=cvs.getContext('2d');
+  let w,h,pts=[];
+  function rsz(){w=cvs.width=window.innerWidth;h=cvs.height=window.innerHeight;}
+  window.addEventListener('resize',rsz);rsz();
+  for(let i=0;i<60;i++){
+    pts.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.5,vy:(Math.random()-0.5)*0.5});
+  }
+  let mx=-1000,my=-1000;
+  window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    for(let i=0;i<pts.length;i++){
+      let p=pts[i];
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>w)p.vx*=-1;
+      if(p.y<0||p.y>h)p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);
+      ctx.fillStyle='rgba(126,200,227,0.5)';ctx.fill();
+      for(let j=i+1;j<pts.length;j++){
+        let dx=p.x-pts[j].x, dy=p.y-pts[j].y, d=dx*dx+dy*dy;
+        if(d<15000){
+          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle=`rgba(126,200,227,${0.15-d/100000})`;ctx.stroke();
+        }
+      }
+      let dmx=p.x-mx, dmy=p.y-my, dm=dmx*dmx+dmy*dmy;
+      if(dm<25000){
+        ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(mx,my);
+        ctx.strokeStyle=`rgba(126,200,227,${0.25-dm/100000})`;ctx.stroke();
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
 </script>
 </body>
 </html>
